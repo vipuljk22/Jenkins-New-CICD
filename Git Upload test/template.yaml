@@ -21,6 +21,7 @@ Resources:
           Properties:
             Path: /v1/logging
             Method: get
+      CodeUri: eventLogging/
 
   concatenateString:
     Type: AWS::Serverless::Function
@@ -33,3 +34,4 @@ Resources:
           Properties:
             Path: /v1/concatenate
             Method: post
+      CodeUri: concatenateString/
