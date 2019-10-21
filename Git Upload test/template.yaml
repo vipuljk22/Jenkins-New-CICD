@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: GIG Economy !! This my first CICD Deployment - Version 1.0(GIT Update).
+Description: AbbVie LIR !! This is the demo of CICD Deployment - Version 1.0(GIT Update).
 
 Globals:
   Function:
@@ -12,6 +12,7 @@ Resources:
   eventLogging:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: CICDLoggingLambda
       Handler: eventLogging.handler
       Timeout: 3
       Events:
@@ -25,6 +26,7 @@ Resources:
   concatenateString:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: CICDConcatenateLambda
       Handler: concatenateString.handler
       Events:
         PostConcat:
